@@ -1,0 +1,28 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "An application that generates a team profile website",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjacktwil/team-profile-generator.git"
+  },
+  "author": "Tracey Jackson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjacktwil/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/cjacktwil/team-profile-generator#readme",
+  "devDependencies": {
+    "jest": "^26.2.2"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
