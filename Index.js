@@ -1,4 +1,4 @@
-const addManager = require('./src/build-team.js');
+const {addManager, addEmployee, addEmployeeType, addEngineer, addIntern} = require('./src/build-team.js');
 // const inquirer = require('inquirer');
 
 // init = () => {

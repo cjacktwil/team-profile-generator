@@ -4,11 +4,6 @@ const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 
 const inquirer = require('inquirer');
-// const { noop } = require('rxjs');
-
-// const inquirer = require('inquirer');
-// const generatePage = require('./src/page-template.js');
-// const { writeFile, copyFile } = require('./utils/generate-site.js');
 
 const addManager = () => {
 
@@ -68,16 +63,6 @@ const addManager = () => {
 ])
 .then(({name, id, email, officeNumber}) => {
     let manager = new Manager(name, id, email, officeNumber)
-      
-    // data => {
-    // let manager = new Manager(data);
-    // let {name, id, email} = manager;
-
-    console.log(name);
-    console.log(id);
-    console.log(email);
-    console.log(officeNumber);
-    console.log(manager);
 })
 .then(addEmployee);
 
@@ -160,12 +145,6 @@ const addEngineer = () => {
     ])
     .then(({name, id, email, github}) => {
         let engineer = new Engineer(name, id, email, github)
-        console.log(name);
-        console.log(id);
-        console.log(email);
-        console.log(github);
-        console.log(engineer);
-     
 })
 .then(addEmployee);
 };
@@ -227,11 +206,6 @@ const addIntern = () => {
     ])
     .then(({name, id, email, school}) => {
         let intern = new Intern(name, id, email, school)
-        console.log(name);
-        console.log(id);
-        console.log(email);
-        console.log(school);
-        console.log(intern);
 })
 .then(addEmployee);
 };
@@ -256,105 +230,4 @@ const addEmployeeType = () => {
 })
 };
 
-// const buildTeam = () => {
-// addManager()
-// .then(({name, id, email, officeNumber}) => {
-//     let manager = new Manager(name, id, email, officeNumber)
-      
-    // data => {
-    // let manager = new Manager(data);
-    // let {name, id, email} = manager;
-
-//     console.log(name);
-//     console.log(id);
-//     console.log(email);
-//     console.log(officeNumber);
-//     console.log(manager);
-// })
-
-// .then.addEmployee(add) 
-//     if (add) {
-//             console.log("add another employee");
-//         } else {
-//             console.log("finished");
-//         }
-// .then(addEmployee);
-
-// console.log(employee); 
-// };
-// .then(addEmployee = (add) => {
-// if (add) {
-//     console.log("add another employee");
-// } else {
-//     console.log("finished");
-// }
-// };
-
-
-
-
-
-// .then(({employee}) => {
-// if (addEmployee.employee = 'Engineer') {
-//     addEngineer().then(({name, id, email, github}) => {
-//             let engineer = new Engineer(name, id, email, github)
-        
-//             console.log(name);
-//             console.log(id);
-//             console.log(email);
-//             console.log(github);
-//             console.log(engineer);
-//         });
-// } else {
-// if (employee = 'Intern') {
-    // console.log("adding intern");
-    // addIntern().then(({name, id, email, school}) => {
-    //     let intern = new Intern(name, id, email, school)
-
-    //     console.log(name);
-    //     console.log(id);
-    //     console.log(email);
-    //     console.log(school);
-    //     console.log(intern);
-    // })
-// } else {
-//     console.log("Finished entering employees.")
-// }
-// })
-// .then(addEngineer().then(({name, id, email, github}) => {
-//     let engineer = new Engineer(name, id, email, github)
-
-//     console.log(name);
-//     console.log(id);
-//     console.log(email);
-//     console.log(github);
-//     console.log(engineer);
-// }))
-// .then(({id}) => {
-//     let manager = new Manager(id);
-//     console.log(id);
-//     // console.log(email);
-//     console.log(manager);
-
-// })
-// .then(function(data) { 
-//     addEmployee() 
-// if (addEmployee.addEmployee = 'Engineer') {
-//     // addEngineer()
-//     console.log("add engineer");
-// } else if (addEmployee.addEmployee = 'Intern') {
-//     // addIntern();
-//     console.log("added intern");
-// } else {
-//     console.log("team complete");
-// }
-// }
-// )
-// };
-// buildTeam();
-// module.exports = addManager();
-// module.exports = addEmployee();
-
-addManager();
-// addEmployee();
-// addEmployeeType();
+module.exports = {addManager, addEmployee, addEmployeeType, addEngineer, addIntern};
