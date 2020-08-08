@@ -79,6 +79,7 @@ const addManager = () => {
     console.log(officeNumber);
     console.log(manager);
 })
+.then(addEmployee);
 
 };
 
@@ -157,6 +158,16 @@ const addEngineer = () => {
             }
         }
     ])
+    .then(({name, id, email, github}) => {
+        let engineer = new Engineer(name, id, email, github)
+        console.log(name);
+        console.log(id);
+        console.log(email);
+        console.log(github);
+        console.log(engineer);
+     
+})
+.then(addEmployee);
 };
 
 const addIntern = () => {
@@ -214,6 +225,15 @@ const addIntern = () => {
             }
         }
     ])
+    .then(({name, id, email, school}) => {
+        let intern = new Intern(name, id, email, school)
+        console.log(name);
+        console.log(id);
+        console.log(email);
+        console.log(school);
+        console.log(intern);
+})
+.then(addEmployee);
 };
 
 const addEmployeeType = () => {
@@ -225,6 +245,15 @@ const addEmployeeType = () => {
             choices: ['Engineer', 'Intern'],
         }
     ])
+.then(({employee}) => {
+    if (employee === 'Engineer') {
+        console.log('engineer');
+        addEngineer();
+    } else if (employee === 'Intern') {
+        console.log('intern');
+        addIntern();
+    }
+})
 };
 
 // const buildTeam = () => {
@@ -326,6 +355,6 @@ const addEmployeeType = () => {
 // module.exports = addManager();
 // module.exports = addEmployee();
 
-// addManager();
-addEmployee();
+addManager();
+// addEmployee();
 // addEmployeeType();
