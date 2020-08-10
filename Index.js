@@ -1,7 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -251,19 +250,16 @@ const createTeam = (myTeam) => {
         .filter(employee => employee.getRole() === "Manager")
         .map(manager => generateManager(manager))
         .join(''));
-    console.log("pushed manager");
 
     teamHtml.push(myTeam
         .filter(employee => employee.getRole() === "Engineer")
         .map(engineer => generateEngineer(engineer))
         .join(''));
-    console.log("pushed engineer");
 
     teamHtml.push(myTeam
         .filter(employee => employee.getRole() === "Intern")
         .map(intern => generateIntern(intern))
         .join(''));
-    console.log("pushed intern");
 
     teamHtml = teamHtml.join('');
 
@@ -274,6 +270,7 @@ const generateManager = (manager) => {
     // console.log("generating manager");
 
     return `
+    <div class="col-sm-6">
     <div class="card">
     <div class="card-header bg-primary text-white">
     <h2 class="card-title">${manager.getName()}</h2>
@@ -288,6 +285,7 @@ const generateManager = (manager) => {
     <li class="list-group-item">Office number: ${manager.officeNumber}</li>
     </ul>
     </div>
+    </div>
     `
 };
 
@@ -295,6 +293,7 @@ const generateEngineer = (engineer) => {
     // console.log("generating engineer");
 
     return `
+    <div class="col-sm-6">
     <div class="card">
     <div class="card-header bg-primary text-white">
     <h2 class="card-title">${engineer.getName()}</h2>
@@ -309,6 +308,7 @@ const generateEngineer = (engineer) => {
     <li class="list-group-item">GitHub Account: <a href="http://github.com/${engineer.getGithub()}"target="_blank">${engineer.github}</a></li>
     </ul>
     </div>
+    </div>
     `
 };
 
@@ -317,6 +317,7 @@ const generateIntern = (intern) => {
 
     // console.log("generating intern")
     return `
+    <div class="col-sm-6">
     <div class="card">
     <div class="card-header bg-primary text-white">
     <h2 class="card-title">${intern.getName()}</h2>
@@ -330,6 +331,7 @@ const generateIntern = (intern) => {
     <li class="list-group-item">Email: <a href=mailto:"${intern.getEmail()}">${intern.getEmail()}</a></li>
     <li class="list-group-item">School: ${intern.getSchool()}</li>
     </ul>
+    </div>
     </div>
     `;
 };

@@ -22,19 +22,16 @@ const createTeam = (myTeam) => {
         .filter(employee => employee.getRole() === "Manager")
         .map(manager => generateManager(manager))
         .join(''));
-    console.log("pushed manager");
 
     teamHtml.push(myTeam
         .filter(employee => employee.getRole() === "Engineer")
         .map(engineer => generateEngineer(engineer))
         .join(''));
-    console.log("pushed engineer");
 
     teamHtml.push(myTeam
         .filter(employee => employee.getRole() === "Intern")
         .map(intern => generateIntern(intern))
         .join(''));
-    console.log("pushed intern");
 
     teamHtml = teamHtml.join('');
 

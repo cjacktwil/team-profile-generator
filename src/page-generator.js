@@ -20,7 +20,7 @@
       <h1>MY TEAM</h1>
       </header>
       <main>
-      <div class="card-deck">
+      <div class="row">
     ${teamHtml}
     </div>
       </main>
