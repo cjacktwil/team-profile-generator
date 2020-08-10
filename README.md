@@ -19,6 +19,8 @@ To install the Team Profile Generator, clone the repo and run npm install.
 ## Usage
 Initiate the application by running " node Index " from the command line in the root directory of the file. 
 
+[![WalkthroughVideo](./assets/images/video-screenshot.png)]("https://drive.google.com/file/d/1CE4ZJp1pKK56ERaYvNUmCvAqSpP_3ala/view" target:"_blank" "Team Profile Generator Demo")
+
 You will be prompted to add the following information:
 Manager:
 - Name
@@ -41,6 +43,8 @@ Intern:
 - School
 
 Once you have added all team members, an html file will be generated and copied to the "/dist" folder. 
+
+![Generated File](./assets/images/screenshot.png)
 
 
 
