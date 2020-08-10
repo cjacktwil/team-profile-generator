@@ -11,6 +11,7 @@ test('creates an engineer with a GitHub account and the role of Engineer', () =>
     expect(engineer.role).toBe('Engineer');
     expect(engineer.getGithub()).toEqual(expect.any(String));
     expect(engineer.getRole()).toBe('Engineer');
+    expect(engineer.getName()).toBe('Sam');
 });
 
 // test('creates engineer with role of engineer', () => {
