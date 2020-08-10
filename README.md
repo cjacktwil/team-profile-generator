@@ -19,7 +19,7 @@ To install the Team Profile Generator, clone the repo and run npm install.
 ## Usage
 Initiate the application by running " node Index " from the command line in the root directory of the file. 
 
-[![WalkthroughVideo](./assets/images/video-screenshot.png)](https://drive.google.com/file/d/1CE4ZJp1pKK56ERaYvNUmCvAqSpP_3ala/view "Team Profile Generator Demo")
+[![WalkthroughVideo](./assets/images/video-screenshot.png)](https://drive.google.com/file/d/1PBpYz8oaYGASCnHebI4ByJhrNskXSV4I/view "Team Profile Generator Demo")
 
 You will be prompted to add the following information:
 Manager:
